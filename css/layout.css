@@ -1,0 +1,154 @@
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  height: 72px;
+  padding: 0 48px;
+
+  background-color: white;
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  font-weight: bold;
+}
+
+.chapter-nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.chapter-menu-button {
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  background-color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.chapter-menu {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  width: 370px;
+  padding: 14px;
+  background-color: white;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  z-index: 20;
+}
+
+.chapter-group {
+  margin-bottom: 12px;
+}
+
+.chapter-group:last-child {
+  margin-bottom: 0;
+}
+
+.chapter-group-title {
+  margin: 8px 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #6b7280;
+}
+
+.chapter-item {
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 10px;
+  background-color: white;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.chapter-item:hover {
+  background-color: var(--light-blue);
+}
+
+.chapter-item.active {
+  background-color: var(--light-blue);
+  color: var(--blue);
+  font-weight: bold;
+}
+
+.hero {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.hero-card {
+  width: min(900px, 100%);
+  padding: 48px;
+  background-color: var(--card);
+  border-radius: 24px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.hero-card h1 {
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+.hero-card p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.path-buttons {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.learning-section {
+  min-height: 100vh;
+  padding: 20px 40px 80px 40px;
+  scroll-margin-top: 10px;
+}
+
+.section-header {
+  width: min(1000px, 100%);
+  margin: 0 auto 20px auto;
+
+  display: flex;
+  justify-content: space-between;
+  color: gray;
+}
+
+.lesson-card {
+  width: min(1000px, 100%);
+  margin: 0 auto;
+  padding: 32px;
+  background-color: var(--card);
+  border-radius: 24px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+.lesson-card h2 {
+  margin-top: 0;
+  font-size: 30px;
+}
+
+.page-controls {
+  width: min(1000px, 100%);
+  margin: 24px auto 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+}

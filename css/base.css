@@ -1,0 +1,20 @@
+:root {
+  --blue: #2f6fed;
+  --grey: #6b7280;
+  --dark: #222;
+  --background: #f5f7fb;
+  --card: #ffffff;
+  --border: #dddddd;
+  --light-blue: #eef4ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--background);
+  color: var(--dark);
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HCI Experiments and Statistics Learning</title>
+  <link rel="stylesheet" href="css/main.css"/>
+</head>
+
+<body>
+  <header class="top-nav">
+    <div class="logo">HCI Learning</div>
+
+    <nav class="chapter-nav">
+      <button id="chapter-menu-button" class="chapter-menu-button">Chapters ▾</button>
+      <div id="chapter-menu" class="chapter-menu hidden-block"></div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-card">
+        <h1>Learn HCI Experiments Without Fear</h1>
+        <p></p>
+
+        <div class="path-buttons">
+          <button id="start-experiment" class="path-button">Experiment Design</button>
+          <button id="start-statistics" class="path-button secondary">Statistics</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="learning-section" class="learning-section">
+      <div class="section-header">
+        <p id="unit-label">Unit 1</p>
+        <p id="progress-label">1 / 4</p>
+      </div>
+
+      <article class="lesson-card">
+        <div id="lesson-content"></div>
+      </article>
+
+      <div class="page-controls">
+        <button id="prev-button">Previous</button>
+        <button id="next-button">Next</button>
+      </div>
+    </section>
+  </main>
+
+  
+  <script src="js/data/experiment-design/unit01_intro.js"></script>
+  <script src="js/data/experiment-design/unit02_variables.js"></script>
+  <script src="js/data/experiment-design/unit03_participants.js"></script>
+  <script src="js/data/experiment-design/unit04_designs.js"></script>
+
+  <script src="js/data/statistics/unit05_statistics_intro.js"></script>
+  <script src="js/data/statistics/unit06_central_tendency.js"></script>
+  <script src="js/data/statistics/unit07_variability.js"></script>
+  <script src="js/data/statistics/unit09_sampling_uncertainty.js"></script>
+  <script src="js/data/statistics/unit10_hypothesis_testing.js"></script>
+  <script src="js/data/statistics/unit11_anova.js"></script>
+
+
+  <script src="js/data/courseData.js"></script>
+  <script src="js/state.js"></script>
+
+
+  <script src="js/render.js"></script>
+  <script src="js/render_statistics.js"></script>
+  <script src="js/render_statistics_unit06.js"></script>
+  <script src="js/render_statistics_unit07.js"></script>
+  <script src="js/render_statistics_unit09.js"></script>
+
+
+  <script src="js/interactions.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
