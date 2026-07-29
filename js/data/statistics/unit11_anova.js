@@ -1,5 +1,5 @@
 const Unit11ANOVA = {
-  unitTitle: "Unit 10: ANOVA Intuition",
+  unitTitle: "Unit 10: ANOVA",
 
   pages: [
     {
@@ -342,7 +342,7 @@ const Unit11ANOVA = {
     },
 
     {
-      title: "Quick check: ANOVA intuition",
+      title: "Quick check: ANOVA",
       blocks: [
         {
           type: "reveal",
@@ -374,6 +374,19 @@ const Unit11ANOVA = {
             "F is large when group differences are large compared with random/background variation.",
             "Between-subjects and within-subjects ANOVA split variation in different ways."
           ]
+        }
+      ]
+    },
+
+    {
+      title: "Course complete",
+      titleClass: "course-complete-title",
+      isCourseCompletion: true,
+      blocks: [
+        {
+          type: "conceptBox",
+          title: "Well done!",
+          text: "You have completed all the learning content."
         }
       ]
     }

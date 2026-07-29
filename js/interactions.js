@@ -25,6 +25,14 @@ function addBlockEvents() {
     });
   });
 
+  const multiShowButtons = document.querySelectorAll("[data-show-multi-index]");
+  multiShowButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      const blockIndex = Number(button.dataset.showMultiIndex);
+      showMultiSelectAnswer(blockIndex, button);
+    });
+  });
+
   setupSamplingActivities();
 }
 
@@ -73,6 +81,29 @@ function checkMultiSelectAnswer(blockIndex) {
     feedback.textContent = "Some choices need checking again.";
     feedback.className = "feedback-text incorrect";
   }
+}
+
+function showMultiSelectAnswer(blockIndex, button) {
+  const page = getCurrentPage();
+  const block = page.blocks[blockIndex];
+  const checkboxes = document.querySelectorAll(`[data-multi-index="${blockIndex}"]`);
+
+  checkboxes.forEach(function (checkbox, optionIndex) {
+    checkbox.checked = block.options[optionIndex].correct;
+    checkbox.disabled = true;
+  });
+
+  const checkButton = document.querySelector(`[data-check-multi-index="${blockIndex}"]`);
+  if (checkButton) {
+    checkButton.disabled = true;
+  }
+  button.disabled = true;
+
+  unlockBlocks([block.answerExplanationBlockId]);
+  unlockBlocks(block.unlocks);
+
+  pageIsUnlocked = true;
+  updateButtons();
 }
 
 function revealAnswer(blockIndex, button) {

@@ -12,6 +12,7 @@ function scrollToLessonStart() {
 
 function updateButtons() {
   const unit = getCurrentUnit();
+  const page = getCurrentPage();
 
   const isFirstPageOfCourse =
     currentPath === "experiment" &&
@@ -23,14 +24,24 @@ function updateButtons() {
     currentUnitIndex === courseData.statistics.length - 1 &&
     currentPageIndex === unit.pages.length - 1;
 
+  const isCourseCompletion = page.isCourseCompletion === true;
+
   prevButton.disabled = isFirstPageOfCourse;
+  nextButton.textContent = isCourseCompletion ? "Learn again" : "Next";
   nextButton.disabled =
-    isLastPageOfCourse || pageIsUnlocked === false;
+    (isLastPageOfCourse && !isCourseCompletion) ||
+    pageIsUnlocked === false;
 }
 
 function goToNextPage() {
   const units = courseData[currentPath];
   const unit = getCurrentUnit();
+  const page = getCurrentPage();
+
+  if (page.isCourseCompletion === true) {
+    switchPath("experiment");
+    return;
+  }
 
   if (currentPageIndex < unit.pages.length - 1) {
     currentPageIndex = currentPageIndex + 1;

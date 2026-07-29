@@ -17,7 +17,7 @@ function renderPage() {
   unitLabel.textContent = unit.unitTitle;
   progressLabel.textContent = `${currentPageIndex + 1} / ${unit.pages.length}`;
 
-  let html = `<h2>${page.title}</h2>`;
+  let html = `<h2 class="${page.titleClass || ""}">${page.title}</h2>`;
   page.blocks.forEach(function (block, index) {
     html += renderBlock(block, index);
   });
@@ -274,9 +274,16 @@ function renderMultiSelectQuiz(block, blockIndex) {
 
   html += `
       </div>
-      <button class="check-answer-button" data-check-multi-index="${blockIndex}">
-        Check answer
-      </button>
+      <div class="multi-select-actions">
+        <button class="check-answer-button" data-check-multi-index="${blockIndex}">
+          Check answer
+        </button>
+        ${block.showAnswer ? `
+          <button class="show-answer-button" data-show-multi-index="${blockIndex}">
+            Show the answer
+          </button>
+        ` : ""}
+      </div>
       <p class="feedback-text" id="feedback-${blockIndex}"></p>
     </div>
   `;

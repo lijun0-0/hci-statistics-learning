@@ -84,8 +84,17 @@ const unit02Variables = {
             }
           ],
           feedback: "Correct. Time, errors, and success rate can all be dependent variables because they are measured.",
+          showAnswer: true,
+          answerExplanationBlockId: "dv-answer-explanation",
           required: true,
           unlocks: ["dv-explanation"]
+        },
+        {
+          type: "conceptBox",
+          blockId: "dv-answer-explanation",
+          initiallyHidden: true,
+          title: "Why these are the answers",
+          text: "<strong>Interface version:</strong> Not a dependent variable. It is the independent variable (IV) introduced earlier because the researcher changes or compares Version A and Version B.<br><br><strong>Time to find the classroom:</strong> A dependent variable (DV) because the researcher can measure how long each participant takes.<br><br><strong>App colour:</strong> Not a dependent variable in this experiment. It is not an outcome being measured; if the researcher deliberately changed the colour, it could instead be an independent variable.<br><br><strong>Number of errors:</strong> A dependent variable because the researcher can count the errors participants make while using each interface.<br><br><strong>Success rate:</strong> A dependent variable because the researcher can measure the proportion of participants who successfully find the classroom."
         },
         {
           type: "conceptBox",

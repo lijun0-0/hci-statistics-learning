@@ -317,12 +317,31 @@
   margin-right: 10px;
 }
 
-.check-answer-button {
+.multi-select-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
   margin-top: 18px;
+}
+
+.check-answer-button,
+.show-answer-button {
   padding: 12px 20px;
   border: none;
   border-radius: 12px;
   background-color: var(--dark);
   color: white;
   cursor: pointer;
+}
+
+.show-answer-button {
+  border: 1px solid var(--dark);
+  background-color: white;
+  color: var(--dark);
+}
+
+.check-answer-button:disabled,
+.show-answer-button:disabled {
+  cursor: default;
+  opacity: 0.55;
 }
