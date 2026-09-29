@@ -1,0 +1,2 @@
+setupNavigationEvents();
+renderPage();

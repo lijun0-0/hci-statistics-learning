@@ -1,0 +1,73 @@
+.design-flow {
+  margin-top: 28px;
+}
+
+.design-flow-row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 18px;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 18px;
+  background-color: #f9fafb;
+}
+
+.design-flow-label {
+  color: #374151;
+  font-weight: bold;
+}
+
+.design-flow-steps {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+
+.flow-node {
+  display: flex;
+  min-width: 110px;
+  min-height: 56px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 16px;
+  border-radius: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.flow-node.group {
+  border: 1px solid #f2d28a;
+  background-color: #fef3c7;
+}
+
+.flow-node.person {
+  width: 58px;
+  min-width: 58px;
+  height: 58px;
+  border: 1px solid #93c5fd;
+  border-radius: 50%;
+  background-color: #dbeafe;
+}
+
+.flow-node.phone {
+  width: 90px;
+  min-height: 120px;
+  border: 6px solid #222;
+  border-radius: 22px;
+  background-color: #eef4ff;
+}
+
+.flow-arrow {
+  color: blue;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+@media (max-width: 900px) {
+  .design-flow-row {
+    grid-template-columns: 1fr;
+  }
+}

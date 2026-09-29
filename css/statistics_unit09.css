@@ -1,0 +1,16 @@
+.unit09-error-table .simple-data-table th,
+.unit09-error-table .simple-data-table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.unit09-error-table .simple-data-table td:first-child {
+  font-weight: bold;
+  background-color: #f9fafb;
+}
+
+.content-image-block img[src*="10-5-1"],
+.content-image-block img[src*="10-6-1"],
+.content-image-block img[src*="10-8-1"] {
+  max-height: 560px;
+}
